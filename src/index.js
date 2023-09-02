@@ -1,11 +1,12 @@
 module.exports = function reverse (n) {
   
+    n = Math.abs(n);
 
-    let str = toString(n);
+    let str = String(n);
     let reverseStr = '';
 
-    for (let i = str.length; i=1; i = i - 1) {
+    for (let i = str.length-1; i>=0; i--) {        
         reverseStr = reverseStr + str[i];
     }
-    return reverseStr;
+    return Number(reverseStr);
 }
